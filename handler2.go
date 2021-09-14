@@ -17,6 +17,9 @@ func main() {
 	th := http.HandlerFunc(timeHandler)
 	mux.Handle("/time", th)
 
+	//Forma corta
+	//mux.HandleFunc("/time", timeHandler)
+
 	log.Println("Listenin...")
 	http.ListenAndServe(":3000", mux)
 }
